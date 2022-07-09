@@ -2,44 +2,43 @@
     padding-bottom: 100px;
     &__tabs {
         margin-top: 70px;
-        list-style-type: none;   /* убираем точки */
+        list-style-type: none;
         display: flex;
         justify-content: center;
         align-items: center;
         margin-bottom: 0;
         padding-left: 0;
-
     }
     &__tab {
-        width: 222px;
-        height: 52px;
-        border: 2px solid #D0D0D0;
-        font-weight: 400;
+        width: 220px;
+        height: 50px;
+        border: 2px solid #d0d0d0;
+        color: #6b6b6b;
         font-size: 18px;
-        line-height: 48px;
+        font-weight: 400;
         text-transform: uppercase;
-        color: #6B6B6B;
         text-align: center;
-        transform: skewX(-25deg);   /* поворачиваем табы */
-        margin: 0 5px;   /* расстояние между табами */
-        cursor: pointer;    /* мышь меняеться при наведении */
+        line-height: 48px;
+        transform: skewX(-25deg);
+        margin: 0 5px;
+        cursor: pointer;
         transition: 0.5s all;
         &:hover {
-            box-shadow: 3px 3px 20px $main-color;   /* красивое размытие за табами */
+            box-shadow: 3px 3px 20px $main-color;
             border: none;
         }
         div {
-            transform: skewX(25deg);  /*   в обратную торону поворачиваем текст в табах */
+            transform: skewX(25deg);
         }
-        &_active {          /*  первый активный красный таб */
+        &_active {
             color: #fff;
-            background-color: $main-color; 
-            border: none;  
+            background-color: $main-color;
+            border: none;
         }
     }
     &__content {
         margin-top: 60px;
-        display: flex;
+        display: none;
         justify-content: space-between;
         flex-wrap: wrap;
         &_active {
@@ -47,73 +46,75 @@
         }
     }
     &-item {
-        width: 303px;
-        min-height: 442px;
-        border: 2px solid #E8E8E8;
+        width: 300px;
+        min-height: 440px;
+        border: 2px solid #e8e8e8;
         padding: 20px 20px 26px 20px;
-        overflow: hidden;  
+        overflow: hidden;
         margin-bottom: 20px;
         &__img {
             display: block;
             margin: 0 auto;
-            max-width: 100%;  /*  чтобы картинка в блоке не вылазила */
+            max-width: 100%;
             height: 200px;
         }
         &__subtitle {
             margin-top: 20px;
-            font-weight: 700;
+            color: #0d0d0d;
             font-size: 16px;
-            color: #0D0D0D;
+            font-weight: 700;
             text-align: center;
         }
         &__descr {
             margin-top: 16px;
-            font-weight: 300;
+            color: #0d0d0d;
             font-size: 14px;
-            color: #0D0D0D;
+            font-weight: 300;
             text-align: center;
         }
         &__link {
             display: block;
             margin-top: 17px;
-            font-weight: 500;
-            font-size: 14px;
             color: $main-color;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: underline;
             text-align: center;
+            text-transform: uppercase;
             &:hover {
-                color: $main-color;   /* чтобы сслыка не меняла цвет */
-            }      
+                color: $main-color;
+            }
         }
         hr {
+            background-color: #e8e8e8;
             margin-top: 19px;
             margin-bottom: 21px;
-            background-color: #E8E8E8;
             border-bottom: none;
         }
         &__footer {
             display: flex;
-            justify-content: space-between;     /* ложим ценц и купить рядом! */
+            justify-content: space-between;
             align-items: center;
         }
         &__old-price {
-            font-weight: 300;
-            font-size: 14px;
-            text-decoration-line: line-through;  /* перечеркнут текст */
             color: #555555;
+            font-size: 14px;
+            font-weight: 300;
+            text-decoration: line-through;
         }
         &__price {
-            font-weight: 700;
-            font-size: 20px;
             color: #050505;
+            font-size: 20px;
+            font-weight: 700;
         }
         &__wrapper {
             display: flex;
-            width: calc(200% + 40px)
+            width: calc(200% + 40px);
         }
         &__content {
             width: 50%;
             margin-right: 0px;
-            transform: translateX(-100%);  /*  задаем классы активности! */
+            transform: translateX(-100%);
             transition: 0.5s all;
             &_active {
                 transform: translateX(0%);
@@ -136,12 +137,12 @@
             }
             li {
                 position: relative;
-                font-weight: 300;
-                font-size: 14px;
                 color: #555555;
+                font-size: 14px;
+                font-weight: 300;
                 margin-bottom: 20px;
                 &:before {
-                    content: "";
+                    content: '';
                     position: absolute;
                     width: 5px;
                     height: 5px;
